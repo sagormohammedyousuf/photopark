@@ -1,0 +1,111 @@
+/* @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Gloock&display=swap');
+
+:root {
+  --font-family: 'DM Sans', sans-serif;
+  --color-bg: #0000;
+  --color-text: #FFFF;
+  --color-accent: #646cff;
+  --color-accent-hover: #535bf2;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: var(--font-family);
+  background: var(--color-bg)!important;
+  color: var(--color-text);
+  overflow-x: hidden;
+}
+
+.sidebar {
+  min-height: 100vh;
+  background-color: #000;
+}
+
+.logo-text {
+ font-family: "Gloock", serif;
+  font-weight: 500;
+  padding: 1.5rem;
+  color: #ffff;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo-text p:first-child {
+  font-size: 1.3rem;
+  margin-bottom: -10px !important;
+}
+
+.logo-text p:nth-child(2) {
+  font-size: 3rem;
+  color:#fafafa
+}
+
+.logo-text p:last-child {
+  font-size: 1rem;
+  margin-right: -100px !important;
+  margin-top: -10px;
+}
+
+
+.menus {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 20px;
+  /* border: 1px solid red; */
+  min-height: 76vh
+}
+
+.menu-title {
+  font-family:  "Gloock", serif;
+  font-size: 26px
+}
+
+.portfolio-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.portfolio-list li {
+  cursor: pointer;
+  text-transform:uppercase;
+  font-size: 13px;
+}
+
+.social-links {
+  /* position: absolute;
+  bottom: 0px;   */
+}
+
+.social-links ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+}
+
+.social-links ul li a {
+  color: var(--color-text);
+  font-size: 35px;
+  padding-right: 20px;
+}
+
+
+@media (max-width: 991px) {
+  .menus {
+    align-items: center;
+    text-align: center;
+    padding-left: 0px;
+  }
+}
