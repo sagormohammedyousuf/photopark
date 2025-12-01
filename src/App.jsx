@@ -2,6 +2,8 @@
 import { Link } from 'react-router-dom'
 import './App.css'
 import { Facebook, Instagram, LinkedinIcon, X, Youtube } from 'lucide-react'
+import HomeCarouselLeft from './components/HomeCarouselLeft'
+import HomeCarouselRight from './components/HomeCarouselRight'
 
 function App() {
 
@@ -9,7 +11,7 @@ function App() {
   return (
     <>
       <div className='row'>
-        <div className="col-lg-2">
+        <div className="col-lg-2 pe-0">
           <div className="sidebar">
             <div className='logo-text'>
               <p className='mb-0'>The</p>
@@ -90,7 +92,20 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="col-lg-10"></div>
+        <div className="col-lg-10 ps-0">
+          <div className="row">
+            <div className="col-lg-6 pe-0">
+              <div className='leftSlider'>
+                <HomeCarouselLeft/>
+              </div>
+            </div>
+            <div className="col-lg-6 ps-0">
+              <div className="rightSlider">
+                <HomeCarouselRight/>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   )
