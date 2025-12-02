@@ -19,6 +19,8 @@ export default function HomeCarouselRight() {
         delay: 3846,
         reverseDirection: true   // 👈 Slide goes downward
       }}
+      allowTouchMove={false}
+      mousewheel={false}
       speed={1000}  
       loop={true}
       style={{ width: "100%", height: "100%" }}

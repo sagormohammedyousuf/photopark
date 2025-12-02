@@ -20,6 +20,8 @@ export default function HomeCarouselLeft() {
       autoplay={{ delay: 3846 }}
       speed={1000}  
       loop={true}
+      allowTouchMove={false}
+      mousewheel={false}
       style={{ width: "100%", height: "100%" }}
     >
       {images.map((img, index) => (

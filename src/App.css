@@ -83,6 +83,16 @@ body {
   font-size: 13px;
 }
 
+.portfolio-list li a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.portfolio-list li a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
 .social-links {
   /* position: absolute;
   bottom: 0px;   */
