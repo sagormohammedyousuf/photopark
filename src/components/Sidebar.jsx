@@ -5,11 +5,15 @@ const Sidebar = () => {
     return (
         <>
             <div className="sidebar">
-                <div className='logo-text'>
-                    <p className='mb-0'>The</p>
-                    <p className='mb-0'>Photo</p>
-                    <p className='park-text'>Park</p>
-                </div>
+                <Link to="/">
+                    <div className='logo-text'>
+
+                        <p className='mb-0'>The</p>
+                        <p className='mb-0'>Photo</p>
+                        <p className='park-text'>Park</p>
+
+                    </div>
+                </Link>
 
                 <div className="menus mt-0 mt-lg-5">
                     <div>
@@ -34,11 +38,12 @@ const Sidebar = () => {
                         <h1 className='menu-title'>Pricing</h1>
                         <ul className='portfolio-list'>
                             <li>
-                             <Link to="/pricing">Wedding photography</Link>
-                                
+                                <Link to="/pricing">Wedding photography</Link>
+
                             </li>
                             <li>
-                                Cinematography
+                            <Link to="/pricing">Cinematography</Link>
+                               
                             </li>
                         </ul>
                     </div>

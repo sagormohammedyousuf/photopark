@@ -1,12 +1,34 @@
-import React from 'react'
+import { useState } from 'react'
 import Sidebar from '../../components/Sidebar'
 import './pricing.css'
-import { Check, X } from 'lucide-react'
+import { Check, Menu, TextAlignJustify, X } from 'lucide-react'
 const Pricing = () => {
+    const [showSidebar, setShowSidebar] = useState(false)
   return (
-    <div className='row'>
-      <div className="col-xl-2 col-lg-3 pe-0">
-        <Sidebar />
+    <div className='row pricing-page'>
+      <div className="col-xl-2 col-lg-3 pe-0 position-relative">
+               {/* Mobile Toggle Buttons */}
+        <div className="mobile-menu-toggle">
+          {!showSidebar ? (
+            <Menu 
+              className='text-dark menu-icon' 
+              size={32}
+              onClick={() => setShowSidebar(true)}
+            />
+          ) : (
+            <X 
+              className='text-white menu-icon close-icon' 
+              size={32}
+              onClick={() => setShowSidebar(false)}
+            />
+          )}
+        </div>
+
+        {/* Sidebar */}
+        <div className={`sidebar-container position-relative ${showSidebar ? 'active' : ''}`}>
+          <Sidebar />
+        </div>
+
       </div>
       <div className="col-xl-10 col-lg-9 pe-0 ps-0">
         <div className="pricing-banner">
@@ -36,8 +58,8 @@ const Pricing = () => {
             </div>
           </div>
 
-          <div className="row mt-5">
-            <div className="col-lg-4 p-4">
+          <div className="row mt-5 p-3 p-lg-0">
+            <div className="col-lg-4 p-lg-4">
               <div className="pricing-card">
                 <div className="pricing-card-img">
                   <img src='https://shtheme.org/demosd/ckarla/wp-content/uploads/2021/09/1-2.jpg' alt='dsf' />
@@ -46,15 +68,15 @@ const Pricing = () => {
                   <h3 className='pricing-card-title'>Wedding photography</h3>
                   <p className='pricing-card-para'>$300</p>
                   <ul className='pricing-card-list'>
-                    <li><Check className='card-check-icon' size={16} /> 1 Hour Session</li>
-                    <li><Check size={16} /> 20 Edited Photos</li>
-                    <li><Check size={16} /> Online Gallery</li>
-                    <li><X size={16} /> Print Release</li>
+                    <li><Check className='text-success' size={16} /> 1 Hour Session</li>
+                    <li><Check className='text-success' size={16} /> 20 Edited Photos</li>
+                    <li><Check className='text-success' size={16} /> Online Gallery</li>
+                    <li><X className='text-danger' size={16} /> Print Release</li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 p-4">
+            <div className="col-lg-4 p-lg-4">
               <div className="pricing-card">
                 <div className="pricing-card-img">
                   <img src='https://shtheme.org/demosd/ckarla/wp-content/uploads/2021/09/1-2.jpg' alt='dsf' />
@@ -63,15 +85,15 @@ const Pricing = () => {
                   <h3 className='pricing-card-title'>Cinematography</h3>
                   <p className='pricing-card-para'>$600</p>
                   <ul className='pricing-card-list'>
-                    <li><Check size={16} /> 1 Hour Session</li>
-                    <li><Check size={16} /> 20 Edited Photos</li>
-                    <li><Check size={16} /> Online Gallery</li>
-                    <li><X size={16} /> Print Release</li>
+                    <li><Check className='text-success' size={16} /> 1 Hour Session</li>
+                    <li><Check className='text-success'size={16} /> 20 Edited Photos</li>
+                    <li><Check className='text-success'  size={16} /> Online Gallery</li>
+                    <li><X className='text-danger' size={16} /> Print Release</li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 p-4">
+            <div className="col-lg-4 p-lg-4">
               <div className="pricing-card">
                 <div className="pricing-card-img">
                   <img src='https://shtheme.org/demosd/ckarla/wp-content/uploads/2021/09/1-2.jpg' alt='dsf' />
@@ -80,10 +102,10 @@ const Pricing = () => {
                   <h3 className='pricing-card-title'>Model Photography</h3>
                   <p className='pricing-card-para'>$200</p>
                   <ul className='pricing-card-list'>
-                    <li><Check size={16} /> 1 Hour Session</li>
-                    <li><Check size={16} /> 20 Edited Photos</li>
-                    <li><Check size={16} /> Online Gallery</li>
-                    <li><X size={16} /> Print Release</li>
+                    <li><Check className='text-success' size={16} /> 1 Hour Session</li>
+                    <li><Check className='text-success' size={16} /> 20 Edited Photos</li>
+                    <li><Check className='text-success' size={16} /> Online Gallery</li>
+                    <li><X className='text-danger' size={16} /> Print Release</li>
                   </ul>
                 </div>
               </div>
@@ -96,3 +118,5 @@ const Pricing = () => {
 }
 
 export default Pricing
+
+

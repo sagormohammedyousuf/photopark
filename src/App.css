@@ -1,10 +1,10 @@
 /* @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Gloock&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Gloock&display=swap");
 
 :root {
-  --font-family: 'DM Sans', sans-serif;
+  --font-family: "DM Sans", sans-serif;
   --color-bg: #0000;
-  --color-text: #FFFF;
+  --color-text: #ffff;
   --color-accent: #646cff;
   --color-accent-hover: #535bf2;
 }
@@ -19,18 +19,42 @@ body {
   height: 100%;
   width: 100%;
   font-family: var(--font-family);
-  background: var(--color-bg)!important;
+  background: var(--color-bg) !important;
   color: var(--color-text);
   overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .sidebar {
   min-height: 100vh;
   background-color: #000;
+
+  width: 100%;
+  z-index: 1000;
+}
+
+.pricing-page .sidebar {
+   max-width: 100%;
+   position: fixed;
+   bottom: 0;
+
+}
+
+@media (max-width: 991px) {
+  .sidebar {
+    position: relative;
+    top: 0;
+    position: fixed;
+ 
+  }
 }
 
 .logo-text {
- font-family: "Gloock", serif;
+  font-family: "Gloock", serif;
   font-weight: 500;
   padding: 1.5rem;
   color: #ffff;
@@ -43,11 +67,12 @@ body {
 .logo-text p:first-child {
   font-size: 1.3rem;
   margin-bottom: -10px !important;
+  color: #fff;
 }
 
 .logo-text p:nth-child(2) {
   font-size: 2.8rem;
-  color:#fafafa
+  color: #fafafa;
 }
 
 .logo-text p:last-child {
@@ -56,19 +81,18 @@ body {
   margin-top: -10px;
 }
 
-
 .menus {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding-left: 20px;
   /* border: 1px solid red; */
-  min-height: 76vh
+  min-height: 76vh;
 }
 
 .menu-title {
-  font-family:  "Gloock", serif;
-  font-size: 26px
+  font-family: "Gloock", serif;
+  font-size: 26px;
 }
 
 .portfolio-list {
@@ -79,7 +103,7 @@ body {
 
 .portfolio-list li {
   cursor: pointer;
-  text-transform:uppercase;
+  text-transform: uppercase;
   font-size: 13px;
 }
 
@@ -111,7 +135,6 @@ body {
   padding-right: 20px;
 }
 
-
 /* home page slider css  */
 
 .leftSlider {
@@ -122,16 +145,78 @@ body {
   height: 100vh;
 }
 
-
 .homePageSliderImg {
   height: 100% !important;
 }
 
+
+/* .menu icon  */
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  color: var(--color-text);
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  z-index: 1100;
+}
+
+.close-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
 
 @media (max-width: 991px) {
   .menus {
     align-items: center;
     text-align: center;
     padding-left: 0px;
+  }
+
+  /* .sidebar {
+    display: none;
+  } */
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+
+/* For screens below 991px */
+@media (max-width: 991px) {
+
+  /* Position menu icon */
+  .mobile-menu-toggle {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 2000;
+  }
+
+  /* Hide sidebar by default */
+  .sidebar-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 260px;
+    padding-top: 60px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+    z-index: 1999;
+    transition: all 0.3s ease;
+  }
+
+  /* Show when active */
+  .sidebar-container.active {
+    display: block;
+  }
+
+  /* Show menu icons */
+  .menu-icon {
+    display: block;
   }
 }
