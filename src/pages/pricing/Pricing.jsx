@@ -5,9 +5,9 @@ import { Check, Menu, TextAlignJustify, X } from 'lucide-react'
 const Pricing = () => {
     const [showSidebar, setShowSidebar] = useState(false)
   return (
-    <div className='row pricing-page'>
-      <div className="col-xl-2 col-lg-3 pe-0 position-relative">
-               {/* Mobile Toggle Buttons */}
+    <div className='row pricing-page position-relative'>
+
+                     {/* Mobile Toggle Buttons */}
         <div className="mobile-menu-toggle">
           {!showSidebar ? (
             <Menu 
@@ -25,12 +25,13 @@ const Pricing = () => {
         </div>
 
         {/* Sidebar */}
-        <div className={`sidebar-container position-relative ${showSidebar ? 'active' : ''}`}>
+        <div className={`sidebar-container ${showSidebar ? 'active' : ''}`}>
           <Sidebar />
         </div>
-
-      </div>
-      <div className="col-xl-10 col-lg-9 pe-0 ps-0">
+{/*     
+      <div className="col-xl-2 col-lg-3 pe-0 position-relative">
+      </div> */}
+      <div className="col-12 col-lg- pe-0 ps-0">
         <div className="pricing-banner">
           <img src='https://shtheme.org/demosd/ckarla/wp-content/uploads/2021/09/5-1.jpg' alt='banner img' />
 
@@ -39,8 +40,6 @@ const Pricing = () => {
           </div>
 
         </div>
-
-
         <div className="container">
           <div className="row">
             <div className="col-lg-4">
