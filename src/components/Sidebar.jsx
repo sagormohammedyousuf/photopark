@@ -5,15 +5,15 @@ const Sidebar = () => {
     return (
         <>
             <div className="sidebar">
-                <Link to="/">
-                    <div className='logo-text'>
 
+                <div className='logo-text'>
+                    <Link className='logo-link' to="/">
                         <p className='mb-0'>The</p>
                         <p className='mb-0'>Photo</p>
                         <p className='park-text'>Park</p>
+                    </Link>
+                </div>
 
-                    </div>
-                </Link>
 
                 <div className="menus mt-0 mt-lg-5">
                     <div>
@@ -42,8 +42,8 @@ const Sidebar = () => {
 
                             </li>
                             <li>
-                            <Link to="/pricing">Cinematography</Link>
-                               
+                                <Link to="/pricing">Cinematography</Link>
+
                             </li>
                         </ul>
                     </div>
