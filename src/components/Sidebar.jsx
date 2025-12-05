@@ -1,19 +1,14 @@
 
 import { Facebook, Instagram, LinkedinIcon, X, Youtube } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import TextLogo from './TextLogo'
+
 const Sidebar = () => {
     return (
         <>
             <div className="sidebar">
 
-                <div className='logo-text'>
-                    <Link className='logo-link' to="/">
-                        <p className='mb-0'>The</p>
-                        <p className='mb-0'>Photo</p>
-                        <p className='park-text'>Park</p>
-                    </Link>
-                </div>
-
+               <TextLogo/>
 
                 <div className="menus mt-0 mt-lg-5">
                     <div>

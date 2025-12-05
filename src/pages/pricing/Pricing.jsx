@@ -2,12 +2,16 @@ import { useState } from 'react'
 import Sidebar from '../../components/Sidebar'
 import './pricing.css'
 import { Check, Menu, TextAlignJustify, X } from 'lucide-react'
+import TextLogo from '../../components/TextLogo'
 const Pricing = () => {
     const [showSidebar, setShowSidebar] = useState(false)
   return (
     <div className='row pricing-page position-relative'>
-
-                     {/* Mobile Toggle Buttons */}
+      <div className="pricing-main-logo">
+        <TextLogo />
+      </div>
+  
+          {/* Mobile Toggle Buttons */}
         <div className="mobile-menu-toggle">
           {!showSidebar ? (
             <Menu 
