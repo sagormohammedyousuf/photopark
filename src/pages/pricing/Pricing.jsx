@@ -3,6 +3,7 @@ import Sidebar from '../../components/Sidebar'
 import './pricing.css'
 import { Check, Menu, TextAlignJustify, X } from 'lucide-react'
 import TextLogo from '../../components/TextLogo'
+import Footer from '../../components/Footer'
 const Pricing = () => {
     const [showSidebar, setShowSidebar] = useState(false)
   return (
@@ -116,6 +117,9 @@ const Pricing = () => {
           </div>
         </div>
       </div>
+
+
+      <Footer />
     </div>
   )
 }
