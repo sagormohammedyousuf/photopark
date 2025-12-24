@@ -15,7 +15,7 @@ const Sidebar = () => {
                         <h1 className='menu-title'>Portfolios</h1>
                         <ul className='portfolio-list'>
                             <li>
-                                Pre Wedding
+                                <Link to="/portfolio">Wedding photography</Link>
                             </li>
                             <li>
                                 Post Wedding
@@ -64,7 +64,7 @@ const Sidebar = () => {
                     </div>
 
 
-                    <footer className="social-links">
+                    <div className="social-links">
                         <ul className='mb-0'>
                             <li>
                                 <a href='facebook.com'>
@@ -81,7 +81,7 @@ const Sidebar = () => {
                                 </a>
                             </li>
                         </ul>
-                    </footer>
+                    </div>
                 </div>
             </div>
         </>
