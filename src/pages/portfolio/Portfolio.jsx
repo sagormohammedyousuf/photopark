@@ -39,7 +39,7 @@ const Portfolio = () => {
         <Sidebar />
       </div>
 
-      {/* ---- IMAGE GALLERY ---- */}
+
       <div className="container my-5">
         <h2 className="text-center mb-4">Image Gallery</h2>
 
